@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BKPhotoItem.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "CALayer+BKExtension.h"
 
 #define SlowAnimateTime  0.3
-#define FastAnimateTime  0.18
+#define FastAnimateTime  0.3
 
 @protocol BKPhotoItemViewDelegate <NSObject>
 

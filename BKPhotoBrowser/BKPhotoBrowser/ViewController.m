@@ -45,7 +45,10 @@
     NSMutableArray *items = [[NSMutableArray alloc] init];
     for (int i = 0; i<9; i++) {
         BKPhotoItem *photoItem = [[BKPhotoItem alloc] init];
-        photoItem.thumbView = [self.view viewWithTag:i+100];
+        
+        if (i<9) {
+            photoItem.thumbView = [self.view viewWithTag:i+100];
+        }
         
         photoItem.originImageUrl = [NSURL URLWithString:urlArray[i]];
         

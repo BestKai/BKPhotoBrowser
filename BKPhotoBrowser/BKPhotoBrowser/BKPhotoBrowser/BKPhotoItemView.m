@@ -203,7 +203,7 @@
         CGRect originFrame = self.imageContainerView.frame;
         CGFloat scale = fromFrame.size.width / self.imageContainerView.frame.size.width;
         
-        self.imageContainerView.layer.transformScale = scale;
+        [self.imageContainerView.layer setValue:@(scale) forKey:@"transform.scale"];
         
         CGRect containerFrame = self.imageContainerView.frame;
         containerFrame.origin = CGPointMake(CGRectGetMidX(fromFrame), CGRectGetMidY(fromFrame));
@@ -212,7 +212,9 @@
         self.imageContainerView.frame = containerFrame;
         
         [UIView animateWithDuration:SlowAnimateTime delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            self.imageContainerView.layer.transformScale = 1;
+            
+            [self.imageContainerView.layer setValue:@(1) forKey:@"transform.scale"];
+            
             self.imageContainerView.frame = originFrame;
         }completion:^(BOOL finished) {
         
@@ -230,10 +232,13 @@
         
         [UIView animateWithDuration:FastAnimateTime delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
             self.imageView.frame = self.imageContainerView.bounds;
-            self.imageView.layer.transformScale = 1.01;
+            
+            [self.imageView.layer setValue:@(1.01) forKey:@"transform.scale"];
+
         }completion:^(BOOL finished) {
             [UIView animateWithDuration:FastAnimateTime delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
-                self.imageView.layer.transformScale = 1.0;
+                [self.imageView.layer setValue:@(1) forKey:@"transform.scale"];
+
             }completion:^(BOOL finished) {
                 self.imageContainerView.clipsToBounds = YES;
                 
@@ -264,7 +269,7 @@
             
             self.imageContainerView.center = CGPointMake(CGRectGetMidX(fromFrame), CGRectGetMinY(fromFrame));
             
-            self.imageContainerView.layer.transformScale = scale;
+            [self.imageContainerView.layer setValue:@(scale) forKey:@"transform.scale"];
             
         } else {
             CGRect fromFrame = [_fromView convertRect:_fromView.bounds toView:self.imageContainerView];

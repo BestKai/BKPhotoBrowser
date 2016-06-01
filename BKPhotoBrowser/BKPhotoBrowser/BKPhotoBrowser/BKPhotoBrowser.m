@@ -9,7 +9,6 @@
 #import "BKPhotoBrowser.h"
 #import "BKPhotoItemView.h"
 #import "SDWebImageManager.h"
-#import "CALayer+BKExtension.h"
 
 #define kPadding 20
 
@@ -362,11 +361,14 @@
     if (fromView == nil) {
         [UIView animateWithDuration:animated ? 0.25 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
             self.view.alpha = 0.0;
-            self.scrollView.layer.transformScale = 0.95;
+            
+            [self.scrollView.layer setValue:@(0.95) forKey:@"transform.scale"];
+            
             self.scrollView.alpha = 0;
             self.pager.alpha = 0;
         }completion:^(BOOL finished) {
-            self.scrollView.layer.transformScale = 1;
+            [self.scrollView.layer setValue:@(1) forKey:@"transform.scale"];
+
             [self.view removeFromSuperview];
             [self removeFromParentViewController];
             [self cancelAllImageLoad];

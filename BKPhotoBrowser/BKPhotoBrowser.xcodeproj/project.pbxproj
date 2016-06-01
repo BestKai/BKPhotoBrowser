@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		637CA39B79729001622E662E /* libPods-BKPhotoBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E014A8A01DE0FBBB2FFB74 /* libPods-BKPhotoBrowser.a */; };
-		E22456A41CFD77A300A6E855 /* CALayer+BKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E22456A31CFD77A300A6E855 /* CALayer+BKExtension.m */; };
 		E2B6F7B91CFBEC090048618E /* BKPhotoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B6F7B81CFBEC090048618E /* BKPhotoItemView.m */; };
 		E2B6F7BC1CFBEDEC0048618E /* BKPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B6F7BB1CFBEDEC0048618E /* BKPhotoItem.m */; };
 		E2B6F7BF1CFC0CA30048618E /* BKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B6F7BE1CFC0CA30048618E /* BKPhotoBrowser.m */; };
@@ -43,8 +42,6 @@
 		3F497C2DBE696C4D00DF6FDA /* Pods-BKPhotoBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BKPhotoBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-BKPhotoBrowser/Pods-BKPhotoBrowser.release.xcconfig"; sourceTree = "<group>"; };
 		74E014A8A01DE0FBBB2FFB74 /* libPods-BKPhotoBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BKPhotoBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		927F6A84AA3A12A35434581C /* Pods-BKPhotoBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BKPhotoBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BKPhotoBrowser/Pods-BKPhotoBrowser.debug.xcconfig"; sourceTree = "<group>"; };
-		E22456A21CFD77A300A6E855 /* CALayer+BKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+BKExtension.h"; sourceTree = "<group>"; };
-		E22456A31CFD77A300A6E855 /* CALayer+BKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+BKExtension.m"; sourceTree = "<group>"; };
 		E2B6F7B71CFBEC090048618E /* BKPhotoItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoItemView.h; sourceTree = "<group>"; };
 		E2B6F7B81CFBEC090048618E /* BKPhotoItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoItemView.m; sourceTree = "<group>"; };
 		E2B6F7BA1CFBEDEC0048618E /* BKPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoItem.h; sourceTree = "<group>"; };
@@ -112,19 +109,9 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E224569E1CFD73B300A6E855 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				E22456A21CFD77A300A6E855 /* CALayer+BKExtension.h */,
-				E22456A31CFD77A300A6E855 /* CALayer+BKExtension.m */,
-			);
-			name = Category;
-			sourceTree = "<group>";
-		};
 		E2B6F7B61CFBEB980048618E /* BKPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				E224569E1CFD73B300A6E855 /* Category */,
 				E2B6F7BA1CFBEDEC0048618E /* BKPhotoItem.h */,
 				E2B6F7BB1CFBEDEC0048618E /* BKPhotoItem.m */,
 				E2B6F7B71CFBEC090048618E /* BKPhotoItemView.h */,
@@ -387,7 +374,6 @@
 				E2B6F7BC1CFBEDEC0048618E /* BKPhotoItem.m in Sources */,
 				E2B6F7BF1CFC0CA30048618E /* BKPhotoBrowser.m in Sources */,
 				E2F51FDB1CF5C02100B28BDA /* main.m in Sources */,
-				E22456A41CFD77A300A6E855 /* CALayer+BKExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
