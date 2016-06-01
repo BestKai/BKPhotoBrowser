@@ -1,2 +1,3 @@
 # BKPhotoBrowser
-一个图片浏览demo
+一个类似微信朋友圈列表图片放大功能demo
+
