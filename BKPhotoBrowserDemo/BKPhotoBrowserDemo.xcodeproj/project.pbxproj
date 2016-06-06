@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93816CC2A7C091F1CD89735C /* libPods-BKPhotoBrowserDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A221C3AF47170FCFBBF107B8 /* libPods-BKPhotoBrowserDemo.a */; };
+		E28A25AE1D050CDF001587F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25AD1D050CDF001587F8 /* main.m */; };
+		E28A25B11D050CDF001587F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25B01D050CDF001587F8 /* AppDelegate.m */; };
+		E28A25B41D050CDF001587F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25B31D050CDF001587F8 /* ViewController.m */; };
+		E28A25B71D050CDF001587F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28A25B51D050CDF001587F8 /* Main.storyboard */; };
+		E28A25B91D050CDF001587F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28A25B81D050CDF001587F8 /* Assets.xcassets */; };
+		E28A25BC1D050CDF001587F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28A25BA1D050CDF001587F8 /* LaunchScreen.storyboard */; };
+		E28A25C71D050CDF001587F8 /* BKPhotoBrowserDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25C61D050CDF001587F8 /* BKPhotoBrowserDemoTests.m */; };
+		E28A25D21D050CDF001587F8 /* BKPhotoBrowserDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25D11D050CDF001587F8 /* BKPhotoBrowserDemoUITests.m */; };
+		E28A25E61D050F67001587F8 /* BKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25E11D050F67001587F8 /* BKPhotoBrowser.m */; };
+		E28A25E71D050F67001587F8 /* BKPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25E31D050F67001587F8 /* BKPhotoItem.m */; };
+		E28A25E81D050F67001587F8 /* BKPhotoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25E51D050F67001587F8 /* BKPhotoItemView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E28A25C31D050CDF001587F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E28A25A11D050CDF001587F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E28A25A81D050CDF001587F8;
+			remoteInfo = BKPhotoBrowserDemo;
+		};
+		E28A25CE1D050CDF001587F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E28A25A11D050CDF001587F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E28A25A81D050CDF001587F8;
+			remoteInfo = BKPhotoBrowserDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29000B24748182D9CD2EAB33 /* Pods-BKPhotoBrowserDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BKPhotoBrowserDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BKPhotoBrowserDemo/Pods-BKPhotoBrowserDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6B050F9DD6D5081D9E98F5A0 /* Pods-BKPhotoBrowserDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BKPhotoBrowserDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BKPhotoBrowserDemo/Pods-BKPhotoBrowserDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A221C3AF47170FCFBBF107B8 /* libPods-BKPhotoBrowserDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BKPhotoBrowserDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28A25A91D050CDF001587F8 /* BKPhotoBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BKPhotoBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28A25AD1D050CDF001587F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E28A25AF1D050CDF001587F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E28A25B01D050CDF001587F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E28A25B21D050CDF001587F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E28A25B31D050CDF001587F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E28A25B61D050CDF001587F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E28A25B81D050CDF001587F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E28A25BB1D050CDF001587F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E28A25BD1D050CDF001587F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28A25C21D050CDF001587F8 /* BKPhotoBrowserDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BKPhotoBrowserDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28A25C61D050CDF001587F8 /* BKPhotoBrowserDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKPhotoBrowserDemoTests.m; sourceTree = "<group>"; };
+		E28A25C81D050CDF001587F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28A25CD1D050CDF001587F8 /* BKPhotoBrowserDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BKPhotoBrowserDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28A25D11D050CDF001587F8 /* BKPhotoBrowserDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKPhotoBrowserDemoUITests.m; sourceTree = "<group>"; };
+		E28A25D31D050CDF001587F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28A25E01D050F67001587F8 /* BKPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoBrowser.h; sourceTree = "<group>"; };
+		E28A25E11D050F67001587F8 /* BKPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoBrowser.m; sourceTree = "<group>"; };
+		E28A25E21D050F67001587F8 /* BKPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoItem.h; sourceTree = "<group>"; };
+		E28A25E31D050F67001587F8 /* BKPhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoItem.m; sourceTree = "<group>"; };
+		E28A25E41D050F67001587F8 /* BKPhotoItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoItemView.h; sourceTree = "<group>"; };
+		E28A25E51D050F67001587F8 /* BKPhotoItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoItemView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E28A25A61D050CDF001587F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93816CC2A7C091F1CD89735C /* libPods-BKPhotoBrowserDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A25BF1D050CDF001587F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A25CA1D050CDF001587F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40877E19F75FF4CF55B59ADA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A221C3AF47170FCFBBF107B8 /* libPods-BKPhotoBrowserDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80E445F2BD05B63F029B1EBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B050F9DD6D5081D9E98F5A0 /* Pods-BKPhotoBrowserDemo.debug.xcconfig */,
+				29000B24748182D9CD2EAB33 /* Pods-BKPhotoBrowserDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E28A25A01D050CDF001587F8 = {
+			isa = PBXGroup;
+			children = (
+				E28A25DF1D050F67001587F8 /* BKPhotoBrowser */,
+				E28A25AB1D050CDF001587F8 /* BKPhotoBrowserDemo */,
+				E28A25C51D050CDF001587F8 /* BKPhotoBrowserDemoTests */,
+				E28A25D01D050CDF001587F8 /* BKPhotoBrowserDemoUITests */,
+				E28A25AA1D050CDF001587F8 /* Products */,
+				80E445F2BD05B63F029B1EBF /* Pods */,
+				40877E19F75FF4CF55B59ADA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E28A25AA1D050CDF001587F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E28A25A91D050CDF001587F8 /* BKPhotoBrowserDemo.app */,
+				E28A25C21D050CDF001587F8 /* BKPhotoBrowserDemoTests.xctest */,
+				E28A25CD1D050CDF001587F8 /* BKPhotoBrowserDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E28A25AB1D050CDF001587F8 /* BKPhotoBrowserDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E28A25AF1D050CDF001587F8 /* AppDelegate.h */,
+				E28A25B01D050CDF001587F8 /* AppDelegate.m */,
+				E28A25B21D050CDF001587F8 /* ViewController.h */,
+				E28A25B31D050CDF001587F8 /* ViewController.m */,
+				E28A25B51D050CDF001587F8 /* Main.storyboard */,
+				E28A25B81D050CDF001587F8 /* Assets.xcassets */,
+				E28A25BA1D050CDF001587F8 /* LaunchScreen.storyboard */,
+				E28A25BD1D050CDF001587F8 /* Info.plist */,
+				E28A25AC1D050CDF001587F8 /* Supporting Files */,
+			);
+			path = BKPhotoBrowserDemo;
+			sourceTree = "<group>";
+		};
+		E28A25AC1D050CDF001587F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E28A25AD1D050CDF001587F8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E28A25C51D050CDF001587F8 /* BKPhotoBrowserDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E28A25C61D050CDF001587F8 /* BKPhotoBrowserDemoTests.m */,
+				E28A25C81D050CDF001587F8 /* Info.plist */,
+			);
+			path = BKPhotoBrowserDemoTests;
+			sourceTree = "<group>";
+		};
+		E28A25D01D050CDF001587F8 /* BKPhotoBrowserDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E28A25D11D050CDF001587F8 /* BKPhotoBrowserDemoUITests.m */,
+				E28A25D31D050CDF001587F8 /* Info.plist */,
+			);
+			path = BKPhotoBrowserDemoUITests;
+			sourceTree = "<group>";
+		};
+		E28A25DF1D050F67001587F8 /* BKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				E28A25E01D050F67001587F8 /* BKPhotoBrowser.h */,
+				E28A25E11D050F67001587F8 /* BKPhotoBrowser.m */,
+				E28A25E21D050F67001587F8 /* BKPhotoItem.h */,
+				E28A25E31D050F67001587F8 /* BKPhotoItem.m */,
+				E28A25E41D050F67001587F8 /* BKPhotoItemView.h */,
+				E28A25E51D050F67001587F8 /* BKPhotoItemView.m */,
+			);
+			path = BKPhotoBrowser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E28A25A81D050CDF001587F8 /* BKPhotoBrowserDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28A25D61D050CDF001587F8 /* Build configuration list for PBXNativeTarget "BKPhotoBrowserDemo" */;
+			buildPhases = (
+				09732DCE9F764961A844ED12 /* [CP] Check Pods Manifest.lock */,
+				E28A25A51D050CDF001587F8 /* Sources */,
+				E28A25A61D050CDF001587F8 /* Frameworks */,
+				E28A25A71D050CDF001587F8 /* Resources */,
+				AB97010ED08CCA3B09C0073C /* [CP] Embed Pods Frameworks */,
+				8C8C3AEF350E17E109874C69 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BKPhotoBrowserDemo;
+			productName = BKPhotoBrowserDemo;
+			productReference = E28A25A91D050CDF001587F8 /* BKPhotoBrowserDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E28A25C11D050CDF001587F8 /* BKPhotoBrowserDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28A25D91D050CDF001587F8 /* Build configuration list for PBXNativeTarget "BKPhotoBrowserDemoTests" */;
+			buildPhases = (
+				E28A25BE1D050CDF001587F8 /* Sources */,
+				E28A25BF1D050CDF001587F8 /* Frameworks */,
+				E28A25C01D050CDF001587F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E28A25C41D050CDF001587F8 /* PBXTargetDependency */,
+			);
+			name = BKPhotoBrowserDemoTests;
+			productName = BKPhotoBrowserDemoTests;
+			productReference = E28A25C21D050CDF001587F8 /* BKPhotoBrowserDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E28A25CC1D050CDF001587F8 /* BKPhotoBrowserDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28A25DC1D050CDF001587F8 /* Build configuration list for PBXNativeTarget "BKPhotoBrowserDemoUITests" */;
+			buildPhases = (
+				E28A25C91D050CDF001587F8 /* Sources */,
+				E28A25CA1D050CDF001587F8 /* Frameworks */,
+				E28A25CB1D050CDF001587F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E28A25CF1D050CDF001587F8 /* PBXTargetDependency */,
+			);
+			name = BKPhotoBrowserDemoUITests;
+			productName = BKPhotoBrowserDemoUITests;
+			productReference = E28A25CD1D050CDF001587F8 /* BKPhotoBrowserDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E28A25A11D050CDF001587F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = BestKai;
+				TargetAttributes = {
+					E28A25A81D050CDF001587F8 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					E28A25C11D050CDF001587F8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E28A25A81D050CDF001587F8;
+					};
+					E28A25CC1D050CDF001587F8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E28A25A81D050CDF001587F8;
+					};
+				};
+			};
+			buildConfigurationList = E28A25A41D050CDF001587F8 /* Build configuration list for PBXProject "BKPhotoBrowserDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E28A25A01D050CDF001587F8;
+			productRefGroup = E28A25AA1D050CDF001587F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E28A25A81D050CDF001587F8 /* BKPhotoBrowserDemo */,
+				E28A25C11D050CDF001587F8 /* BKPhotoBrowserDemoTests */,
+				E28A25CC1D050CDF001587F8 /* BKPhotoBrowserDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E28A25A71D050CDF001587F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28A25BC1D050CDF001587F8 /* LaunchScreen.storyboard in Resources */,
+				E28A25B91D050CDF001587F8 /* Assets.xcassets in Resources */,
+				E28A25B71D050CDF001587F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A25C01D050CDF001587F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A25CB1D050CDF001587F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09732DCE9F764961A844ED12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C8C3AEF350E17E109874C69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BKPhotoBrowserDemo/Pods-BKPhotoBrowserDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB97010ED08CCA3B09C0073C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BKPhotoBrowserDemo/Pods-BKPhotoBrowserDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E28A25A51D050CDF001587F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28A25B41D050CDF001587F8 /* ViewController.m in Sources */,
+				E28A25E81D050F67001587F8 /* BKPhotoItemView.m in Sources */,
+				E28A25B11D050CDF001587F8 /* AppDelegate.m in Sources */,
+				E28A25E61D050F67001587F8 /* BKPhotoBrowser.m in Sources */,
+				E28A25E71D050F67001587F8 /* BKPhotoItem.m in Sources */,
+				E28A25AE1D050CDF001587F8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A25BE1D050CDF001587F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28A25C71D050CDF001587F8 /* BKPhotoBrowserDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E28A25C91D050CDF001587F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28A25D21D050CDF001587F8 /* BKPhotoBrowserDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E28A25C41D050CDF001587F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E28A25A81D050CDF001587F8 /* BKPhotoBrowserDemo */;
+			targetProxy = E28A25C31D050CDF001587F8 /* PBXContainerItemProxy */;
+		};
+		E28A25CF1D050CDF001587F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E28A25A81D050CDF001587F8 /* BKPhotoBrowserDemo */;
+			targetProxy = E28A25CE1D050CDF001587F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E28A25B51D050CDF001587F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E28A25B61D050CDF001587F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E28A25BA1D050CDF001587F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E28A25BB1D050CDF001587F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E28A25D41D050CDF001587F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E28A25D51D050CDF001587F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E28A25D71D050CDF001587F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B050F9DD6D5081D9E98F5A0 /* Pods-BKPhotoBrowserDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BKPhotoBrowserDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xizhi.com.BKPhotoBrowserDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E28A25D81D050CDF001587F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29000B24748182D9CD2EAB33 /* Pods-BKPhotoBrowserDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BKPhotoBrowserDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xizhi.com.BKPhotoBrowserDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E28A25DA1D050CDF001587F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BKPhotoBrowserDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xizhi.com.BKPhotoBrowserDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BKPhotoBrowserDemo.app/BKPhotoBrowserDemo";
+			};
+			name = Debug;
+		};
+		E28A25DB1D050CDF001587F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BKPhotoBrowserDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xizhi.com.BKPhotoBrowserDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BKPhotoBrowserDemo.app/BKPhotoBrowserDemo";
+			};
+			name = Release;
+		};
+		E28A25DD1D050CDF001587F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BKPhotoBrowserDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xizhi.com.BKPhotoBrowserDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BKPhotoBrowserDemo;
+			};
+			name = Debug;
+		};
+		E28A25DE1D050CDF001587F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BKPhotoBrowserDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xizhi.com.BKPhotoBrowserDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BKPhotoBrowserDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E28A25A41D050CDF001587F8 /* Build configuration list for PBXProject "BKPhotoBrowserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28A25D41D050CDF001587F8 /* Debug */,
+				E28A25D51D050CDF001587F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28A25D61D050CDF001587F8 /* Build configuration list for PBXNativeTarget "BKPhotoBrowserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28A25D71D050CDF001587F8 /* Debug */,
+				E28A25D81D050CDF001587F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28A25D91D050CDF001587F8 /* Build configuration list for PBXNativeTarget "BKPhotoBrowserDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28A25DA1D050CDF001587F8 /* Debug */,
+				E28A25DB1D050CDF001587F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28A25DC1D050CDF001587F8 /* Build configuration list for PBXNativeTarget "BKPhotoBrowserDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28A25DD1D050CDF001587F8 /* Debug */,
+				E28A25DE1D050CDF001587F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E28A25A11D050CDF001587F8 /* Project object */;
+}
