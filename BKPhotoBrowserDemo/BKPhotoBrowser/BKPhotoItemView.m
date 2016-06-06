@@ -198,21 +198,21 @@
         CGRect originFrame = self.imageContainerView.frame;
         CGFloat scale = fromFrame.size.width / self.imageContainerView.frame.size.width;
         
-        [self.imageContainerView.layer setValue:@(scale) forKey:@"transform.scale"];
-        
         CGRect containerFrame = self.imageContainerView.frame;
-        containerFrame.origin = CGPointMake(CGRectGetMidX(fromFrame), CGRectGetMidY(fromFrame));
+        containerFrame.origin = CGPointMake(CGRectGetMidX(fromFrame)-containerFrame.size.width/2, CGRectGetMidY(fromFrame)-containerFrame.size.height/2);
         containerFrame.size.height = fromFrame.size.height / scale;
-        
         self.imageContainerView.frame = containerFrame;
+        
+        [self.imageContainerView.layer setValue:@(scale) forKeyPath:@"transform.scale"];
+        
         
         [UIView animateWithDuration:SlowAnimateTime delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             
-            [self.imageContainerView.layer setValue:@(1) forKey:@"transform.scale"];
+            [self.imageContainerView.layer setValue:@(1) forKeyPath:@"transform.scale"];
             
             self.imageContainerView.frame = originFrame;
         }completion:^(BOOL finished) {
-        
+            
             if (self.zoomDelegate && [self.zoomDelegate respondsToSelector:@selector(zoomEnd)]) {
                 [self.zoomDelegate zoomEnd];
             }
@@ -228,12 +228,12 @@
         [UIView animateWithDuration:FastAnimateTime delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
             self.imageView.frame = self.imageContainerView.bounds;
             
-            [self.imageView.layer setValue:@(1.01) forKey:@"transform.scale"];
-
+            [self.imageView.layer setValue:@(1.01) forKeyPath:@"transform.scale"];
+            
         }completion:^(BOOL finished) {
             [UIView animateWithDuration:FastAnimateTime delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
-                [self.imageView.layer setValue:@(1) forKey:@"transform.scale"];
-
+                [self.imageView.layer setValue:@(1) forKeyPath:@"transform.scale"];
+                
             }completion:^(BOOL finished) {
                 self.imageContainerView.clipsToBounds = YES;
                 
@@ -249,7 +249,7 @@
 - (void)narrowSelfWithItem:(BKPhotoItem *)photoItem animated:(BOOL)animated {
     
     BOOL isFromImageClipped = _fromView.layer.contentsRect.size.height < 1;
-
+    
     [UIView animateWithDuration:animated ? 0.2 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
         if (isFromImageClipped) {
             
@@ -264,7 +264,7 @@
             
             self.imageContainerView.center = CGPointMake(CGRectGetMidX(fromFrame), CGRectGetMinY(fromFrame));
             
-            [self.imageContainerView.layer setValue:@(scale) forKey:@"transform.scale"];
+            [self.imageContainerView.layer setValue:@(scale) forKeyPath:@"transform.scale"];
             
         } else {
             CGRect fromFrame = [_fromView convertRect:_fromView.bounds toView:self.imageContainerView];
@@ -274,10 +274,6 @@
         }
     }completion:^(BOOL finished) {
         
-        [UIView animateWithDuration:animated ? 0.15 : 0 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        } completion:^(BOOL finished) {
-            self.imageContainerView.layer.anchorPoint = CGPointMake(0.5, 0.5);
-        }];
     }];
 }
 
