@@ -55,7 +55,7 @@
         _progressLayer.strokeStart = 0;
         _progressLayer.strokeEnd = 0;
         _progressLayer.hidden = YES;
-
+        
     }
     return _progressLayer;
 }
@@ -96,18 +96,18 @@
         if (isnan(progress)) progress = 0;
         self.progressLayer.hidden = NO;
         self.progressLayer.strokeEnd = progress;    } transform:nil completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
-        if (!self) return;
-        self.progressLayer.hidden = YES;
-        if (stage == YYWebImageStageFinished) {
-            self.maximumZoomScale = 2;
-            if (image) {
-                self->_itemDidLoad = YES;
-                
-                [self resizeSubviewSize];
+            if (!self) return;
+            self.progressLayer.hidden = YES;
+            if (stage == YYWebImageStageFinished) {
+                self.maximumZoomScale = 2;
+                if (image) {
+                    self->_itemDidLoad = YES;
+                    
+                    [self resizeSubviewSize];
+                }
             }
-        }
-        
-    }];
+            
+        }];
     
     [self resizeSubviewSize];
 }
@@ -198,21 +198,21 @@
         CGRect originFrame = self.imageContainerView.frame;
         CGFloat scale = fromFrame.size.width / self.imageContainerView.frame.size.width;
         
-        [self.imageContainerView.layer setValue:@(scale) forKey:@"transform.scale"];
-        
-        CGRect containerFrame = self.imageContainerView.frame;
-        containerFrame.origin = CGPointMake(CGRectGetMidX(fromFrame), CGRectGetMidY(fromFrame));
-        containerFrame.size.height = fromFrame.size.height / scale;
-        
-        self.imageContainerView.frame = containerFrame;
-        
+        if (fromFrame.size.width && fromFrame.size.height) {
+            CGRect containerFrame = self.imageContainerView.frame;
+            containerFrame.origin = CGPointMake(CGRectGetMidX(fromFrame)-containerFrame.size.width/2, CGRectGetMidY(fromFrame)-containerFrame.size.height/2);
+            containerFrame.size.height = fromFrame.size.height / scale;
+            self.imageContainerView.frame = containerFrame;
+            
+            [self.imageContainerView.layer setValue:@(scale) forKeyPath:@"transform.scale"];
+        }
         [UIView animateWithDuration:SlowAnimateTime delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             
-            [self.imageContainerView.layer setValue:@(1) forKey:@"transform.scale"];
+            [self.imageContainerView.layer setValue:@(1) forKeyPath:@"transform.scale"];
             
             self.imageContainerView.frame = originFrame;
         }completion:^(BOOL finished) {
-        
+            
             if (self.zoomDelegate && [self.zoomDelegate respondsToSelector:@selector(zoomEnd)]) {
                 [self.zoomDelegate zoomEnd];
             }
@@ -221,19 +221,25 @@
     } else {
         CGRect fromFrame = [_fromView convertRect:_fromView.bounds toView:self.imageContainerView];
         
-        self.imageContainerView.clipsToBounds = NO;
-        self.imageView.frame = fromFrame;
-        self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+        if (fromFrame.size.height && fromFrame.size.width) {
+            self.imageContainerView.clipsToBounds = NO;
+            self.imageView.frame = fromFrame;
+            self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+        }
         
         [UIView animateWithDuration:FastAnimateTime delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
             self.imageView.frame = self.imageContainerView.bounds;
             
-            [self.imageView.layer setValue:@(1.01) forKey:@"transform.scale"];
-
+            if ((fromFrame.size.height && fromFrame.size.width)) {
+                [self.imageView.layer setValue:@(1.01) forKeyPath:@"transform.scale"];
+            }else
+            {
+                [self.imageView.layer setValue:@(1) forKeyPath:@"transform.scale"];
+            }
         }completion:^(BOOL finished) {
             [UIView animateWithDuration:FastAnimateTime delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
-                [self.imageView.layer setValue:@(1) forKey:@"transform.scale"];
-
+                [self.imageView.layer setValue:@(1) forKeyPath:@"transform.scale"];
+                
             }completion:^(BOOL finished) {
                 self.imageContainerView.clipsToBounds = YES;
                 
@@ -249,35 +255,35 @@
 - (void)narrowSelfWithItem:(BKPhotoItem *)photoItem animated:(BOOL)animated {
     
     BOOL isFromImageClipped = _fromView.layer.contentsRect.size.height < 1;
-
+    
     [UIView animateWithDuration:animated ? 0.2 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
         if (isFromImageClipped) {
             
             CGRect fromFrame = [_fromView convertRect:_fromView.bounds toView:self];
-            CGFloat scale = fromFrame.size.width / self.imageContainerView.frame.size.width * self.zoomScale;
-            CGFloat height = fromFrame.size.height / fromFrame.size.width * self.imageContainerView.frame.size.width;
-            if (isnan(height)) height = self.imageContainerView.frame.size.height;
             
-            CGRect cellFrame = self.imageContainerView.frame;
-            cellFrame.size.height = height;
-            self.imageContainerView.frame = cellFrame;
-            
-            self.imageContainerView.center = CGPointMake(CGRectGetMidX(fromFrame), CGRectGetMinY(fromFrame));
-            
-            [self.imageContainerView.layer setValue:@(scale) forKey:@"transform.scale"];
-            
+            if (fromFrame.size.width && fromFrame.size.height) {
+                CGFloat scale = fromFrame.size.width / self.imageContainerView.frame.size.width * self.zoomScale;
+                CGFloat height = fromFrame.size.height / fromFrame.size.width * self.imageContainerView.frame.size.width;
+                if (isnan(height)) height = self.imageContainerView.frame.size.height;
+                
+                CGRect cellFrame = self.imageContainerView.frame;
+                cellFrame.size.height = height;
+                self.imageContainerView.frame = cellFrame;
+                
+                self.imageContainerView.center = CGPointMake(CGRectGetMidX(fromFrame), CGRectGetMinY(fromFrame));
+                
+                [self.imageContainerView.layer setValue:@(scale) forKeyPath:@"transform.scale"];
+            }
         } else {
             CGRect fromFrame = [_fromView convertRect:_fromView.bounds toView:self.imageContainerView];
-            self.imageContainerView.clipsToBounds = NO;
-            self.imageView.contentMode = _fromView.contentMode;
-            self.imageView.frame = fromFrame;
+            if ((fromFrame.size.width && fromFrame.size.height)) {
+                self.imageContainerView.clipsToBounds = NO;
+                self.imageView.contentMode = _fromView.contentMode;
+                self.imageView.frame = fromFrame;
+            }
         }
     }completion:^(BOOL finished) {
         
-        [UIView animateWithDuration:animated ? 0.15 : 0 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        } completion:^(BOOL finished) {
-            self.imageContainerView.layer.anchorPoint = CGPointMake(0.5, 0.5);
-        }];
     }];
 }
 

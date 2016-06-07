@@ -142,7 +142,7 @@
     
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
-
+    
     
     _fromView = fromView;
     
@@ -179,7 +179,7 @@
     
     
     _scrollView.userInteractionEnabled = NO;
-
+    
     if (item.thumbClippedToTop) {
         
         [UIView animateWithDuration:SlowAnimateTime delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -267,7 +267,7 @@
                 self.topPageCtrLabel.alpha = 1;
             }
         }    }completion:^(BOOL finish) {
-    }];
+        }];
 }
 
 #pragma mark ----- BKPhotoItemViewDelegate
@@ -416,7 +416,7 @@
     [UIView setAnimationsEnabled:YES];
     
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-
+    
     
     NSInteger currentPage = self.currentPage;
     BKPhotoItemView *cell = [self cellForPage:currentPage];
@@ -462,7 +462,7 @@
             }
         }completion:^(BOOL finished) {
             [self.scrollView.layer setValue:@(1) forKey:@"transform.scale"];
-
+            
             [self.view removeFromSuperview];
             [self removeFromParentViewController];
             [self cancelAllImageLoad];
