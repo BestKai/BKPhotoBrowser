@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BKPhotoItem.h"
+#import <YYWebImage/YYWebImage.h>
+
 
 typedef enum : NSUInteger {
     bottomPageCtrType,

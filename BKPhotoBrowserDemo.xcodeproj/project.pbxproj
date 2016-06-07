@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		93816CC2A7C091F1CD89735C /* libPods-BKPhotoBrowserDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A221C3AF47170FCFBBF107B8 /* libPods-BKPhotoBrowserDemo.a */; };
+		E217CC721D06CCC900E764D2 /* BKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E217CC6D1D06CCC900E764D2 /* BKPhotoBrowser.m */; };
+		E217CC731D06CCC900E764D2 /* BKPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E217CC6F1D06CCC900E764D2 /* BKPhotoItem.m */; };
+		E217CC741D06CCC900E764D2 /* BKPhotoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E217CC711D06CCC900E764D2 /* BKPhotoItemView.m */; };
 		E28A25AE1D050CDF001587F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25AD1D050CDF001587F8 /* main.m */; };
 		E28A25B11D050CDF001587F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25B01D050CDF001587F8 /* AppDelegate.m */; };
 		E28A25B41D050CDF001587F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25B31D050CDF001587F8 /* ViewController.m */; };
@@ -16,9 +19,6 @@
 		E28A25BC1D050CDF001587F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28A25BA1D050CDF001587F8 /* LaunchScreen.storyboard */; };
 		E28A25C71D050CDF001587F8 /* BKPhotoBrowserDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25C61D050CDF001587F8 /* BKPhotoBrowserDemoTests.m */; };
 		E28A25D21D050CDF001587F8 /* BKPhotoBrowserDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25D11D050CDF001587F8 /* BKPhotoBrowserDemoUITests.m */; };
-		E28A25E61D050F67001587F8 /* BKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25E11D050F67001587F8 /* BKPhotoBrowser.m */; };
-		E28A25E71D050F67001587F8 /* BKPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25E31D050F67001587F8 /* BKPhotoItem.m */; };
-		E28A25E81D050F67001587F8 /* BKPhotoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E28A25E51D050F67001587F8 /* BKPhotoItemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,12 @@
 		29000B24748182D9CD2EAB33 /* Pods-BKPhotoBrowserDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BKPhotoBrowserDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BKPhotoBrowserDemo/Pods-BKPhotoBrowserDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6B050F9DD6D5081D9E98F5A0 /* Pods-BKPhotoBrowserDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BKPhotoBrowserDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BKPhotoBrowserDemo/Pods-BKPhotoBrowserDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A221C3AF47170FCFBBF107B8 /* libPods-BKPhotoBrowserDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BKPhotoBrowserDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E217CC6C1D06CCC900E764D2 /* BKPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoBrowser.h; sourceTree = "<group>"; };
+		E217CC6D1D06CCC900E764D2 /* BKPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoBrowser.m; sourceTree = "<group>"; };
+		E217CC6E1D06CCC900E764D2 /* BKPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoItem.h; sourceTree = "<group>"; };
+		E217CC6F1D06CCC900E764D2 /* BKPhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoItem.m; sourceTree = "<group>"; };
+		E217CC701D06CCC900E764D2 /* BKPhotoItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoItemView.h; sourceTree = "<group>"; };
+		E217CC711D06CCC900E764D2 /* BKPhotoItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoItemView.m; sourceTree = "<group>"; };
 		E28A25A91D050CDF001587F8 /* BKPhotoBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BKPhotoBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28A25AD1D050CDF001587F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E28A25AF1D050CDF001587F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,12 +64,6 @@
 		E28A25CD1D050CDF001587F8 /* BKPhotoBrowserDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BKPhotoBrowserDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28A25D11D050CDF001587F8 /* BKPhotoBrowserDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKPhotoBrowserDemoUITests.m; sourceTree = "<group>"; };
 		E28A25D31D050CDF001587F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E28A25E01D050F67001587F8 /* BKPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoBrowser.h; sourceTree = "<group>"; };
-		E28A25E11D050F67001587F8 /* BKPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoBrowser.m; sourceTree = "<group>"; };
-		E28A25E21D050F67001587F8 /* BKPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoItem.h; sourceTree = "<group>"; };
-		E28A25E31D050F67001587F8 /* BKPhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoItem.m; sourceTree = "<group>"; };
-		E28A25E41D050F67001587F8 /* BKPhotoItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPhotoItemView.h; sourceTree = "<group>"; };
-		E28A25E51D050F67001587F8 /* BKPhotoItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPhotoItemView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +109,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E217CC6B1D06CCC900E764D2 /* BKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				E217CC6C1D06CCC900E764D2 /* BKPhotoBrowser.h */,
+				E217CC6D1D06CCC900E764D2 /* BKPhotoBrowser.m */,
+				E217CC6E1D06CCC900E764D2 /* BKPhotoItem.h */,
+				E217CC6F1D06CCC900E764D2 /* BKPhotoItem.m */,
+				E217CC701D06CCC900E764D2 /* BKPhotoItemView.h */,
+				E217CC711D06CCC900E764D2 /* BKPhotoItemView.m */,
+			);
+			path = BKPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		E28A25A01D050CDF001587F8 = {
 			isa = PBXGroup;
 			children = (
-				E28A25DF1D050F67001587F8 /* BKPhotoBrowser */,
+				E217CC6B1D06CCC900E764D2 /* BKPhotoBrowser */,
 				E28A25AB1D050CDF001587F8 /* BKPhotoBrowserDemo */,
 				E28A25C51D050CDF001587F8 /* BKPhotoBrowserDemoTests */,
 				E28A25D01D050CDF001587F8 /* BKPhotoBrowserDemoUITests */,
@@ -172,19 +185,6 @@
 				E28A25D31D050CDF001587F8 /* Info.plist */,
 			);
 			path = BKPhotoBrowserDemoUITests;
-			sourceTree = "<group>";
-		};
-		E28A25DF1D050F67001587F8 /* BKPhotoBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				E28A25E01D050F67001587F8 /* BKPhotoBrowser.h */,
-				E28A25E11D050F67001587F8 /* BKPhotoBrowser.m */,
-				E28A25E21D050F67001587F8 /* BKPhotoItem.h */,
-				E28A25E31D050F67001587F8 /* BKPhotoItem.m */,
-				E28A25E41D050F67001587F8 /* BKPhotoItemView.h */,
-				E28A25E51D050F67001587F8 /* BKPhotoItemView.m */,
-			);
-			path = BKPhotoBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,10 +369,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E28A25B41D050CDF001587F8 /* ViewController.m in Sources */,
-				E28A25E81D050F67001587F8 /* BKPhotoItemView.m in Sources */,
+				E217CC741D06CCC900E764D2 /* BKPhotoItemView.m in Sources */,
 				E28A25B11D050CDF001587F8 /* AppDelegate.m in Sources */,
-				E28A25E61D050F67001587F8 /* BKPhotoBrowser.m in Sources */,
-				E28A25E71D050F67001587F8 /* BKPhotoItem.m in Sources */,
+				E217CC721D06CCC900E764D2 /* BKPhotoBrowser.m in Sources */,
+				E217CC731D06CCC900E764D2 /* BKPhotoItem.m in Sources */,
 				E28A25AE1D050CDF001587F8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
