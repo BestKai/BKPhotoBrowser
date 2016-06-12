@@ -43,7 +43,7 @@
 @property (strong,nonatomic) UIView *fromView;
 
 
-@property (assign,nonatomic) id <BKPhotoItemViewDelegate> zoomDelegate;
+@property (weak,nonatomic) id <BKPhotoItemViewDelegate> zoomDelegate;
 
 
 - (void)resizeSubviewSize;

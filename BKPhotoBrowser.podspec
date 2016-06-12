@@ -1,4 +1,4 @@
-Pod::Spec.new do |s
+Pod::Spec.new do |s|
   s.name         = 'BKPhotoBrowser'
   s.summary      = 'A simple photo browser'
   s.version      = '0.0.2'

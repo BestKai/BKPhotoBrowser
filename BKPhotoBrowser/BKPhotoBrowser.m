@@ -136,10 +136,13 @@
 
 - (void)showFromImageView:(UIView *)fromView andCurrentIndex:(NSInteger)currentIndex completion:(void (^)(void))completion
 {
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIWindow *window;
+    window = [UIApplication sharedApplication].keyWindow;
+    if (!window) {
+        window = [UIApplication sharedApplication].delegate.window;
+    }
     [window addSubview:self.view];
     [window.rootViewController addChildViewController:self];
-    
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     
