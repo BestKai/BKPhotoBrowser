@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'BKPhotoBrowser'
   s.summary      = 'A simple photo browser'
-  s.version      = '0.0.2'
+  s.version      = '0.0.3'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'BestKai' => 'bestkai9009@gmail.com' }
   s.homepage     = 'https://github.com/BestKai/BKPhotoBrowser'
