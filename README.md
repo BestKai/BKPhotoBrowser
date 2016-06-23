@@ -6,6 +6,9 @@
 
 支持`cocoapods`导入 `pod "BKPhotoBrowser"`
 
+![image](http://chuantu.biz/t5/11/1466646932x3738746601.gif)
+
+
 有问题请提issues
 
 如果觉得有帮助请star。
