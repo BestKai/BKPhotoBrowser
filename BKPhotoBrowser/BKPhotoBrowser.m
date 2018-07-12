@@ -498,7 +498,7 @@
 
 - (void)cancelAllImageLoad {
     [_cells enumerateObjectsUsingBlock:^(BKPhotoItemView *cell, NSUInteger idx, BOOL *stop) {
-        [cell.imageView yy_cancelCurrentImageRequest];
+        [cell.imageView sd_cancelCurrentAnimationImagesLoad];
     }];
 }
 

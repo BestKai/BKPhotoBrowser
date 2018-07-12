@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BKPhotoItem.h"
-#import <YYWebImage/YYWebImage.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #define SlowAnimateTime  0.3
 #define FastAnimateTime  0.3

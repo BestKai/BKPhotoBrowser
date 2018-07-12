@@ -76,7 +76,7 @@
     [self setZoomScale:1.0 animated:NO];
     self.maximumZoomScale = 1;
     
-    [_imageView yy_cancelCurrentImageRequest];
+    [_imageView sd_cancelCurrentAnimationImagesLoad];
     
     _progressLayer.hidden = NO;
     [CATransaction begin];
@@ -90,25 +90,21 @@
         return;
     }
     
-    [_imageView yy_setImageWithURL:item.originImageUrl placeholder:item.thumbImage options:kNilOptions progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [_imageView sd_setImageWithURL:item.originImageUrl placeholderImage:item.thumbImage options:kNilOptions progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         CGFloat progress = receivedSize / (float)expectedSize;
         progress = progress < 0.01 ? 0.01 : progress > 1 ? 1 : progress;
         if (isnan(progress)) progress = 0;
         self.progressLayer.hidden = NO;
-        self.progressLayer.strokeEnd = progress;    } transform:nil completion:^(UIImage *image, NSURL *url, YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
+        self.progressLayer.strokeEnd = progress;    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             if (!self) return;
             self.progressLayer.hidden = YES;
-            if (stage == YYWebImageStageFinished) {
+            if (image) {
                 self.maximumZoomScale = 2;
-                if (image) {
-                    self->_itemDidLoad = YES;
-                    
-                    [self resizeSubviewSize];
-                }
+                self->_itemDidLoad = YES;
+                
+                [self resizeSubviewSize];
             }
-            
         }];
-    
     [self resizeSubviewSize];
 }
 
@@ -183,8 +179,10 @@
 - (void)zoomSelfWithItem:(BKPhotoItem *)photoItem {
     
     if (!photoItem.thumbClippedToTop) {
-        NSString *imageKey = [[YYWebImageManager sharedManager] cacheKeyForURL:photoItem.originImageUrl];
-        if ([[YYWebImageManager sharedManager].cache getImageForKey:imageKey withType:YYImageCacheTypeMemory]) {
+        
+        NSString *imageKey = [[SDWebImageManager sharedManager] cacheKeyForURL:photoItem.originImageUrl];
+
+        if ([[SDWebImageManager sharedManager].imageCache diskImageDataExistsWithKey:imageKey]) {
             self.item = photoItem;
         }
     }
