@@ -89,7 +89,7 @@
 }
 
 
-- (instancetype)initWithPhotoItems:(NSArray *)PhotoItems
+- (instancetype)initWithPhotoItems:(NSArray<BKPhotoItem *> *)PhotoItems
 {
     self = [super init];
     

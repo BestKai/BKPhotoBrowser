@@ -19,8 +19,12 @@
 
 - (UIImage *)thumbImage
 {
+    if (_thumbImage) {
+        return _thumbImage;
+    }
     if ([_thumbView respondsToSelector:@selector(image)]) {
-        return ((UIImageView *)_thumbView).image;
+        _thumbImage = ((UIImageView *)_thumbView).image;
+        return _thumbImage;
     }
     return nil;
 }

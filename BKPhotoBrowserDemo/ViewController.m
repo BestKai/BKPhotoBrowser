@@ -43,11 +43,11 @@
     
     NSMutableArray *items = [[NSMutableArray alloc] init];
     for (int i = 0; i<9; i++) {
+        UIImageView *ss = [self.view viewWithTag:i+100];
         BKPhotoItem *photoItem = [[BKPhotoItem alloc] init];
-        
-        photoItem.thumbView = [self.view viewWithTag:i+100];
-        
-        photoItem.originImageUrl = [NSURL URLWithString:urlArray[i]];
+        photoItem.thumbView = ss;
+        photoItem.thumbImage = ss.image;
+//        photoItem.originImageUrl = [NSURL URLWithString:urlArray[i]];
         
         [items addObject:photoItem];
     }
