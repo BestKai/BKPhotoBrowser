@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BKPhotoItem.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import <SDWebImage/UIView+WebCache.h>
 
 typedef enum : NSUInteger {
     bottomPageCtrType,

@@ -76,7 +76,7 @@
     [self setZoomScale:1.0 animated:NO];
     self.maximumZoomScale = 1;
     
-    [_imageView sd_cancelCurrentAnimationImagesLoad];
+    [_imageView sd_cancelCurrentImageLoad];
     
     _progressLayer.hidden = NO;
     [CATransaction begin];
@@ -182,7 +182,7 @@
         
         NSString *imageKey = [[SDWebImageManager sharedManager] cacheKeyForURL:photoItem.originImageUrl];
 
-        if ([[SDWebImageManager sharedManager].imageCache diskImageDataExistsWithKey:imageKey]) {
+        if ([[SDImageCache sharedImageCache] diskImageDataExistsWithKey:imageKey]) {
             self.item = photoItem;
         }
     }
